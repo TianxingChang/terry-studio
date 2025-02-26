@@ -2,7 +2,7 @@
  * @Author: Matroid_Walker adimensioner@gmail.com
  * @Date: 2025-02-26 01:36:56
  * @LastEditors: Matroid_Walker adimensioner@gmail.com
- * @LastEditTime: 2025-02-26 23:38:43
+ * @LastEditTime: 2025-02-27 01:37:06
  * @FilePath: /terry-studio/src/thoughts/thoughtPage.tsx
  * @Description:
  *
@@ -48,7 +48,9 @@ const ThoughtPage: React.FC = () => {
   }, [id]);
 
   if (isLoading) {
-    return <div className="text-white p-10 w-full text-center">Loading...</div>;
+    return (
+      <div className="text-white p-10 w-screen text-center">loading... 🚀 </div>
+    );
   }
 
   if (error) {
