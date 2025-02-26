@@ -2,7 +2,7 @@
  * @Author: Matroid_Walker adimensioner@gmail.com
  * @Date: 2025-02-26 01:36:56
  * @LastEditors: Matroid_Walker adimensioner@gmail.com
- * @LastEditTime: 2025-02-26 19:43:18
+ * @LastEditTime: 2025-02-26 23:38:43
  * @FilePath: /terry-studio/src/thoughts/thoughtPage.tsx
  * @Description:
  *
@@ -13,12 +13,19 @@ import { useParams } from "react-router-dom";
 // import { marked } from "marked";
 import ThoughtLayout from "./thoughtLayout";
 import ReactMarkdown from "react-markdown";
+import { thoughtItems } from "./thoughtsList";
 
 const ThoughtPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [content, setContent] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // 查找对应文章的日期
+  const currentThought = thoughtItems.find(
+    (item) => item.link === `/thoughts/${id}`
+  );
+  const thoughtDate = currentThought?.time || "未知日期";
 
   useEffect(() => {
     const fetchThought = async () => {
@@ -49,7 +56,7 @@ const ThoughtPage: React.FC = () => {
   }
 
   return (
-    <ThoughtLayout>
+    <ThoughtLayout date={thoughtDate}>
       <ReactMarkdown>{content}</ReactMarkdown>
     </ThoughtLayout>
   );

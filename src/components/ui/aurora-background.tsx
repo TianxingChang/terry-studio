@@ -1,5 +1,15 @@
+/*
+ * @Author: Matroid_Walker adimensioner@gmail.com
+ * @Date: 2025-02-26 00:34:30
+ * @LastEditors: Matroid_Walker adimensioner@gmail.com
+ * @LastEditTime: 2025-02-27 00:10:48
+ * @FilePath: /terry-studio/src/components/ui/aurora-background.tsx
+ * @Description:
+ *
+ * Copyright (c) 2025 by Terry Chang, All Rights Reserved.
+ */
 import React, { ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;

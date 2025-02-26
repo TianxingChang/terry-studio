@@ -1,14 +1,21 @@
-"use client";
-
+/*
+ * @Author: Matroid_Walker adimensioner@gmail.com
+ * @Date: 2025-02-26 00:34:12
+ * @LastEditors: Matroid_Walker adimensioner@gmail.com
+ * @LastEditTime: 2025-02-27 00:18:33
+ * @FilePath: /terry-studio/src/components/background_aurora.tsx
+ * @Description:
+ *
+ * Copyright (c) 2025 by Terry Chang, All Rights Reserved.
+ */
 import { motion } from "framer-motion";
-import React from "react";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import { AuroraBackground } from "./ui/aurora-background";
 
-const handleBookDemo = () => {
-  // Implement the desired functionality here
-  // For example, redirect to a booking page
-  window.location.href = "/book-demo";
-};
+// const handleBookDemo = () => {
+//   // Implement the desired functionality here
+//   // For example, redirect to a booking page
+//   window.location.href = "/book-demo";
+// };
 
 export function AuroraBackgroundDemo() {
   return (
@@ -24,14 +31,14 @@ export function AuroraBackgroundDemo() {
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
         <div className="text-3xl md:text-6xl font-bold dark:text-white text-center">
-          Intermind: the optimal way to express ideas.
+          Intermind: the optimal way to express.
         </div>
         <div className="font-extralight text-base md:text-2xl dark:text-neutral-200 py-4">
           Coming soon.
         </div>
         <button
-          className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2"
-          onClick={handleBookDemo}
+          className=" dark:bg-white rounded-full w-fit text-white  px-4 py-2"
+          // onClick={handleBookDemo}
         >
           Book demo
         </button>

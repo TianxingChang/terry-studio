@@ -1,6 +1,16 @@
+/*
+ * @Author: Matroid_Walker adimensioner@gmail.com
+ * @Date: 2025-02-26 00:31:50
+ * @LastEditors: Matroid_Walker adimensioner@gmail.com
+ * @LastEditTime: 2025-02-26 23:42:09
+ * @FilePath: /terry-studio/src/projects/cyberlamp.tsx
+ * @Description:
+ *
+ * Copyright (c) 2025 by Terry Chang, All Rights Reserved.
+ */
 const CyberLamp = () => {
   return (
-    <div className="w-full flex flex-col items-center gap-4 justify-center h-full p-6">
+    <div className="w-screen flex flex-col items-center gap-4 justify-center h-full p-6">
       <p className="font-bold my-2">The Design Report</p>
       <div className="border-2 p-1 bg-slate-600 rounded-lg">
         <iframe

@@ -14,9 +14,9 @@ const Chat = () => {
   const ChatMessage = () => {
     if (messages.length === 0) {
       return (
-        <div className="flex-1 overflow-y-auto p-4 flex items-center justify-center flex-col">
+        <div className="flex-1 overflow-y-auto p-4 flex items-center pb-40 justify-center flex-col">
           <div className="text-4xl text-gray-300 font-bold">Terry AI</div>
-          <div className="text-sm text-gray-400 mt-2">
+          <div className="text-sm text-gray-400 md:text-center w-full mt-2">
             I'm a digital clone of Terry Chang's personality — feel free to ask
             me anything.
             <br />
@@ -69,7 +69,7 @@ const Chat = () => {
     setMessages([...messages, newMessage]);
 
     const aiResponse: Message = {
-      text: "This is a placeholder AI response.",
+      text: "Terry AI is not available at the moment (coming soon).",
       isUser: false,
       avatar: "/mapperai_logo.png",
     };
@@ -78,8 +78,8 @@ const Chat = () => {
   };
 
   return (
-    <div className="h-screen w-screen p-10 ">
-      <div className="h-full max-w-3xl mx-auto flex flex-col ">
+    <div className="fixed inset-0 w-screen p-10 ">
+      <div className="h-full max-w-3xl mx-auto flex flex-col  ">
         {/* Back button */}
         <div className="p-2 flex justify-between items-center mb-20 ">
           <div>
