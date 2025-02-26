@@ -2,7 +2,7 @@
  * @Author: Matroid_Walker adimensioner@gmail.com
  * @Date: 2025-02-26 01:41:02
  * @LastEditors: Matroid_Walker adimensioner@gmail.com
- * @LastEditTime: 2025-02-26 23:32:24
+ * @LastEditTime: 2025-02-27 01:23:55
  * @FilePath: /terry-studio/src/thoughts/thoughtLayout.tsx
  * @Description:
  *
@@ -80,14 +80,13 @@ const ThoughtLayout = ({ children, date }: ThoughtLayoutProps) => {
 
   return (
     <div className="w-screen pb-10 min-h-screen flex justify-center items-start pt-20 font-sans">
-      <div className="w-1/2 ">
+      <div className="md:w-1/2 w-4/5">
         <div className="w-full flex justify-between items-center mb-20">
           <div
             role="button"
             onClick={() => {
               setCurrentPage("Thoughts");
-              console.log("setCurrentPage", currentPage);
-              navigate(-1);
+              navigate("/", { state: { from: "thoughts" } });
             }}
             className="cursor-pointer text-lg text-white transition-colors duration-200 hover:text-purple-200"
           >

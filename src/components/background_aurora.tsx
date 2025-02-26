@@ -2,7 +2,7 @@
  * @Author: Matroid_Walker adimensioner@gmail.com
  * @Date: 2025-02-26 00:34:12
  * @LastEditors: Matroid_Walker adimensioner@gmail.com
- * @LastEditTime: 2025-02-27 00:18:33
+ * @LastEditTime: 2025-02-27 01:25:51
  * @FilePath: /terry-studio/src/components/background_aurora.tsx
  * @Description:
  *
@@ -28,7 +28,7 @@ export function AuroraBackgroundDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="relative flex w-full flex-col gap-4 items-center justify-center px-4"
       >
         <div className="text-3xl md:text-6xl font-bold dark:text-white text-center">
           Intermind: the optimal way to express.
