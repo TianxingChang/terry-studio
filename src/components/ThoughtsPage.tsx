@@ -14,8 +14,8 @@ import { thoughtItems } from "../thoughts/thoughtsList";
 
 const ThoughtsPage = () => {
   return (
-    <div className="w-full flex justify-center items-center mt-10 mb-20">
-      <div className="w-[95%] md:w-4/7 flex justify-center items-center bg-[rgb(5,5,5)] rounded-lg p-4 md:p-10 border-[rgb(30,30,30)] border-[1px]">
+    <div className="flex justify-center items-center mt-10 mb-20 w-full">
+      <div className="w-[95%] md:w-4/7 flex justify-center items-center bg-[rgb(10,10,10)] rounded-lg p-4 md:p-10 border-[rgb(30,30,30)] border-[1px]">
         <AnimatedList
           items={thoughtItems}
           showGradients={true}

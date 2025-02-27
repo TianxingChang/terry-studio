@@ -4,10 +4,10 @@ import { ProjectCard } from "./ProjectCard";
 
 const ProjectsPage = () => {
   return (
-    <div className="w-full flex-col items-center justify-center  ">
-      <div className="w-full flex justify-center ">
-        <div className="w-4/7 md:w-4/7 flex items-center justify-center  rounded-xl mt-10 mb-0 border-[rgb(40,40,40)]">
-          <div className="w-full md:w-1/3  ">
+    <div className="flex-col justify-center items-center px-4 w-full">
+      <div className="flex justify-center px-2 w-full">
+        <div className="w-4/7 md:w-4/7 flex items-center justify-center  rounded-xl mt-4 mb-0 border-[rgb(40,40,40)]">
+          <div className="w-full md:w-1/3">
             <TextPressure
               className=""
               text="Projects"
@@ -67,7 +67,7 @@ const ProjectsPage = () => {
         image="/lampfi/lampfi_cover.png"
         link="/projects/cyberlamp"
       />
-      {/* <div className="w-full flex justify-center h-100 mb-10">
+      {/* <div className="flex justify-center mb-10 w-full h-100">
         <div className="w-5/7 md:w-4/7 justify-center flex bg-[rgb(10,10,10)] rounded-b-lg border-[rgb(40,40,40)] border-[1px] overflow-hidden">
           <div style={{ position: "relative" }} className="w-full h-full">
             <InfiniteScroll

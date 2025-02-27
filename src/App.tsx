@@ -30,11 +30,8 @@ function App() {
     const navigate = useNavigate();
     return (
       <div className="min-w-screen bg-black min-h-[100vh] overflow-x-hidden text-white font-outfit flex flex-col">
-        <div className="flex justify-center items-center p-10 pt-20 w-full text-3xl">
-          Terry's Studio
-        </div>
         <div className="flex justify-center px-2 w-full">
-          <div className="flex justify-between items-center pt-12 pb-3 w-5/7 md:w-4/7">
+          <div className="flex justify-between items-center pt-12 pb-3 w-3/4 md:w-4/7">
             <div className="flex justify-center space-x-4">
               <div
                 onClick={() => setCurrentPage("Home")}
@@ -68,6 +65,23 @@ function App() {
               {window.innerWidth < 768 ? "💬" : "Chat"}
             </div>
           </div>
+        </div>
+        <div className="flex justify-center w-full">
+          {currentPage === "Home" && (
+            <div className="flex justify-center items-center p-10 pt-14 text-3xl text-center md:pt-20 w-5/7 md:w-full">
+              Terry Chang <br /> 常天行
+            </div>
+          )}
+          {currentPage === "Projects" && (
+            <div className="flex justify-center items-center pt-10 w-full text-3xl">
+              ↓
+            </div>
+          )}
+          {currentPage === "Thoughts" && (
+            <div className="flex justify-center items-center p-10 pt-20 w-full text-3xl">
+              Just a thought.
+            </div>
+          )}
         </div>
         {currentPage === "Home" && <HomePage />}
         {currentPage === "Projects" && <ProjectsPage />}
