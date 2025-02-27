@@ -1,3 +1,13 @@
+/*
+ * @Author: Matroid_Walker adimensioner@gmail.com
+ * @Date: 2025-02-24 00:56:23
+ * @LastEditors: Matroid_Walker adimensioner@gmail.com
+ * @LastEditTime: 2025-02-27 13:50:00
+ * @FilePath: /terry-studio/src/App.tsx
+ * @Description:
+ *
+ * Copyright (c) 2025 by Terry Chang, All Rights Reserved.
+ */
 import "./App.css";
 import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
@@ -20,11 +30,11 @@ function App() {
     const navigate = useNavigate();
     return (
       <div className="min-w-screen bg-black min-h-[100vh] overflow-x-hidden text-white font-outfit flex flex-col">
-        <div className="w-full pt-20 text-3xl flex justify-center items-center p-10 ">
+        <div className="flex justify-center items-center p-10 pt-20 w-full text-3xl">
           Terry's Studio
         </div>
-        <div className="w-full flex justify-center px-2">
-          <div className="w-5/7 md:w-4/7 flex justify-between pt-12 pb-3 items-center">
+        <div className="flex justify-center px-2 w-full">
+          <div className="flex justify-between items-center pt-12 pb-3 w-5/7 md:w-4/7">
             <div className="flex justify-center space-x-4">
               <div
                 onClick={() => setCurrentPage("Home")}
@@ -83,6 +93,8 @@ function App() {
         <Route path="/projects/segway" element={<Segway />} />
         <Route path="/projects/dash" element={<Dash />} />
         <Route path="/thoughts/:id" element={<ThoughtPage />} />
+        {/* 添加 404 路由 */}
+        <Route path="*" element={<Layout />} />
       </Routes>
     </>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import Lanyard from "./myLinyard/Linyard.tsx";
 import { GithubFill, XFill, LinkedinFill, Envelope } from "akar-icons";
 

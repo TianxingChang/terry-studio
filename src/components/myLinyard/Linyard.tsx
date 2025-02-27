@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unknown-property */
-"use client";
+// /* eslint-disable react/no-unknown-property */
 import { useEffect, useRef, useState } from "react";
 import { Canvas, extend, useThree, useFrame } from "@react-three/fiber";
 import {
@@ -20,11 +19,23 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
 
+// Extend the @react-three/fiber module
+declare module "@react-three/fiber" {
+  interface ThreeElements {
+    meshLineGeometry: JSX.IntrinsicElements["meshLineGeometry"] & {
+      attach?: string;
+    };
+    meshLineMaterial: JSX.IntrinsicElements["meshLineMaterial"] & {
+      attach?: string;
+    };
+  }
+}
+
+extend({ MeshLineGeometry, MeshLineMaterial });
+
 import cardGLB from "./card.glb";
 import lanyard from "./lanyard.png";
 import cardImage from "./card_white.png";
-
-extend({ MeshLineGeometry, MeshLineMaterial });
 
 interface LanyardProps {
   position?: [number, number, number];

@@ -2,7 +2,7 @@
  * @Author: Matroid_Walker adimensioner@gmail.com
  * @Date: 2025-02-26 01:41:02
  * @LastEditors: Matroid_Walker adimensioner@gmail.com
- * @LastEditTime: 2025-02-27 01:23:55
+ * @LastEditTime: 2025-02-27 01:42:33
  * @FilePath: /terry-studio/src/thoughts/thoughtLayout.tsx
  * @Description:
  *
@@ -76,7 +76,7 @@ interface ThoughtLayoutProps {
 
 const ThoughtLayout = ({ children, date }: ThoughtLayoutProps) => {
   const navigate = useNavigate();
-  const { setCurrentPage, currentPage } = useStore();
+  const { setCurrentPage } = useStore();
 
   return (
     <div className="w-screen pb-10 min-h-screen flex justify-center items-start pt-20 font-sans">
