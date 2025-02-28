@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div className="w-full mb-70 md:mb-44 md:mt-6">
       <div className="flex justify-center w-full rounded-3xl h-100">
-        <div className="w-5/7  md:w-2/7 rounded-2xl border-[1px] border-[rgb(46,46,46)] bg-[rgb(26,26,26)]">
+        <div className="w-5/7  md:w-3/7 rounded-2xl border-[1px] border-[rgb(46,46,46)] bg-[rgb(26,26,26)]">
           <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
         </div>
       </div>

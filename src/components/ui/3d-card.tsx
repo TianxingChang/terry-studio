@@ -275,7 +275,7 @@ export const CardContainer: React.FC<CardContainerProps> = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "flex justify-center items-center py-20",
+          "flex justify-center items-center py-1",
           containerClassName
         )}
         style={{

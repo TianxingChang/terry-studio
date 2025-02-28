@@ -4,10 +4,10 @@ import { ProjectCard } from "./ProjectCard";
 
 const ProjectsPage = () => {
   return (
-    <div className="flex-col justify-center items-center px-4 w-full">
+    <div className="flex-col justify-center items-center px-4 w-screen">
       <div className="flex justify-center px-2 w-full">
         <div className="w-4/7 md:w-4/7 flex items-center justify-center  rounded-xl mt-4 mb-0 border-[rgb(40,40,40)]">
-          <div className="w-full mt-10 md:w-1/3 bg-[rgb(20,20,20)] p-4 rounded-2xl px-10">
+          {/* <div className="px-10 my-10 w-full rounded-2xl md:w-1/3">
             <TextPressure
               className=""
               text="Projects"
@@ -21,52 +21,56 @@ const ProjectsPage = () => {
               strokeColor="#ff0000"
               minFontSize={36}
             />
-          </div>
-          <div className="h-10"></div>
+          </div> */}
+          <div className="my-16 text-3xl">Projects Gallery</div>
         </div>
       </div>
-      <ProjectCard
-        title="InterMind"
-        description="AI-powered presentation tool  -- [2024]"
-        image="/intermind/idea_image.jpg"
-        link="/projects/intermind"
-      />
-      <ProjectCard
-        title="Dash"
-        description="Web app "
-        image="/dash/dash_demo.png"
-        link="/projects/dash"
-      />
-      <ProjectCard
-        title="Truth Camera"
-        description="Hackathon project"
-        image="/truthcamera/hackUST_2.jpg"
-        link="/projects/truth_camera"
-      />
-      <ProjectCard
-        title="FreeRider X"
-        description="HCI project -- [2022]"
-        image="/freerider/freerider_1.jpg"
-        link="/projects/freerider_x"
-      />
-      <ProjectCard
-        title="Rover A"
-        description="DIY project -- [2021]"
-        image="https://i.ytimg.com/vi/-0G5-Zo1iWw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBx1l4ZjzZRjTxvwbCZYtGKjNql-w"
-        link="/projects/rover_a"
-      />
-      <ProjectCard
-        title="Not a Segway"
-        description="Concept Design -- [2020]"
-        image="/segway/segway.png"
-        link="/projects/segway"
-      />
-      <ProjectCard
-        title="CyberLamp"
-        description="Design of a desk lamp"
-        image="/lampfi/lampfi_cover.png"
-        link="/projects/cyberlamp"
-      />
+      <div className="flex justify-center p-2 w-full">
+        <div className="bg-[rgb(30,30,30)] mt-10 p-2 w-full rounded-2xl md:w-fit flex-col justify-center">
+          <ProjectCard
+            title="InterMind"
+            description="AI-powered presentation tool  -- [2024]"
+            image="/intermind/idea_image.jpg"
+            link="/projects/intermind"
+          />
+          <ProjectCard
+            title="Dash"
+            description="Web app "
+            image="/dash/dash_demo.png"
+            link="/projects/dash"
+          />
+          <ProjectCard
+            title="Truth Camera"
+            description="Hackathon project"
+            image="/truthcamera/hackUST_2.jpg"
+            link="/projects/truth_camera"
+          />
+          <ProjectCard
+            title="FreeRider X"
+            description="HCI project -- [2022]"
+            image="/freerider/freerider_1.jpg"
+            link="/projects/freerider_x"
+          />
+          <ProjectCard
+            title="Rover A"
+            description="DIY project -- [2021]"
+            image="https://i.ytimg.com/vi/-0G5-Zo1iWw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBx1l4ZjzZRjTxvwbCZYtGKjNql-w"
+            link="/projects/rover_a"
+          />
+          <ProjectCard
+            title="Not a Segway"
+            description="Concept Design -- [2020]"
+            image="/segway/segway.png"
+            link="/projects/segway"
+          />
+          <ProjectCard
+            title="CyberLamp"
+            description="Design of a desk lamp"
+            image="/lampfi/lampfi_cover.png"
+            link="/projects/cyberlamp"
+          />
+        </div>
+      </div>
       {/* <div className="flex justify-center mb-10 w-full h-100">
         <div className="w-5/7 md:w-4/7 justify-center flex bg-[rgb(10,10,10)] rounded-b-lg border-[rgb(40,40,40)] border-[1px] overflow-hidden">
           <div style={{ position: "relative" }} className="w-full h-full">

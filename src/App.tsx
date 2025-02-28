@@ -32,8 +32,8 @@ function App() {
     return (
       <div className="min-w-screen bg-black min-h-[100vh] overflow-x-hidden text-white font-outfit flex flex-col">
         <div className="flex justify-center px-2 w-full">
-          <div className="flex justify-between items-center px-5 mt-8 mb-3 w-full md:mt-12 md:w-4/7">
-            <div className="flex justify-center items-center space-x-4">
+          <div className="flex justify-between items-center mt-7 mb-3 w-6/7 md:mt-12 md:w-3/7">
+            <div className="flex justify-center items-center space-x-4 text-base">
               <div
                 onClick={() => setCurrentPage("Home")}
                 className={` hover:text-gray-300 transition-colors ${
@@ -61,7 +61,7 @@ function App() {
             </div>
             <div
               onClick={() => navigate("/chat")}
-              className="rounded-md px-3 font-bold text-xs py-[7px] bg-[rgb(23,23,23)] hover:bg-[rgb(50,50,50)] transition-colors cursor-pointer"
+              className="rounded-md px-3 text-sm border-[1px] border-[rgb(60,60,60)] py-[7px] bg-[rgb(23,23,23)] hover:bg-[rgb(50,50,50)] transition-colors cursor-pointer"
             >
               {window.innerWidth < 768 ? (
                 <ShinyText
