@@ -19,7 +19,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        aurora: "aurora 60s linear infinite",
+        aurora: "aurora 15s linear infinite",
+        shine: "shine 5s linear infinite",
       },
       keyframes: {
         aurora: {
@@ -30,9 +31,10 @@ module.exports = {
             backgroundPosition: "-350% 50%, -350% 50%",
           },
         },
-      },
-      animation: {
-        aurora: "aurora 15s linear infinite",
+        shine: {
+          "0%": { backgroundPosition: "100%" },
+          "100%": { backgroundPosition: "-100%" },
+        },
       },
     },
   },

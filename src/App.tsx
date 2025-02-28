@@ -23,6 +23,7 @@ import TruthCamera from "./projects/truth_camera";
 import Segway from "./projects/segway";
 import ThoughtPage from "./thoughts/thoughtPage";
 import useStore from "./store/useStore"; // 导入 Zustand store
+import ShinyText from "./components/ui/ShinyText";
 
 function App() {
   const { currentPage, setCurrentPage } = useStore(); // 使用 Zustand store
@@ -31,8 +32,8 @@ function App() {
     return (
       <div className="min-w-screen bg-black min-h-[100vh] overflow-x-hidden text-white font-outfit flex flex-col">
         <div className="flex justify-center px-2 w-full">
-          <div className="flex justify-between items-center pt-12 pb-3 w-3/4 md:w-4/7">
-            <div className="flex justify-center space-x-4">
+          <div className="flex justify-between items-center px-5 mt-8 mb-3 w-full md:mt-12 md:w-4/7">
+            <div className="flex justify-center items-center space-x-4">
               <div
                 onClick={() => setCurrentPage("Home")}
                 className={` hover:text-gray-300 transition-colors ${
@@ -60,23 +61,37 @@ function App() {
             </div>
             <div
               onClick={() => navigate("/chat")}
-              className="rounded-md px-3 text-sm py-1 bg-[rgb(63,63,63)] hover:bg-[rgb(100,100,100)] cursor-pointer"
+              className="rounded-md px-3 font-bold text-xs py-[7px] bg-[rgb(23,23,23)] hover:bg-[rgb(50,50,50)] transition-colors cursor-pointer"
             >
-              {window.innerWidth < 768 ? "💬" : "Chat"}
+              {window.innerWidth < 768 ? (
+                <ShinyText
+                  text="💫"
+                  disabled={false}
+                  speed={10}
+                  className="custom-class"
+                />
+              ) : (
+                <ShinyText
+                  text="Terry AI"
+                  disabled={false}
+                  speed={10}
+                  className="custom-class"
+                />
+              )}
             </div>
           </div>
         </div>
         <div className="flex justify-center w-full">
           {currentPage === "Home" && (
-            <div className="flex justify-center items-center p-10 pt-14 text-3xl text-center md:pt-20 w-5/7 md:w-full">
+            <div className="flex justify-center items-center p-10 mt-10 text-3xl text-center md:pt-20 w-5/7 md:w-full">
               Terry Chang <br /> 常天行
             </div>
           )}
-          {currentPage === "Projects" && (
+          {/* {currentPage === "Projects" && (
             <div className="flex justify-center items-center pt-10 w-full text-3xl">
               ↓
             </div>
-          )}
+          )} */}
           {currentPage === "Thoughts" && (
             <div className="flex justify-center items-center p-10 pt-20 w-full text-3xl">
               Just a thought.

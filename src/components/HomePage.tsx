@@ -12,32 +12,32 @@ const HomePage = () => {
       <div className="flex justify-center mt-10 w-full text-lg space-x-30">
         <div className="flex-col justify-center items-center text-sm w-5/7 md:text-base">
           <div>
-            <div className="flex gap-3 items-center md:justify-center">
-              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)]">
+            <div className="flex gap-3 justify-center items-center">
+              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
                 <a href="https://github.com/tianxingchang">
                   <GithubFill strokeWidth={2} size={18} />
                 </a>
               </div>
-              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)]">
+              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
                 <a href="https://x.com/crazibility">
                   <XFill strokeWidth={2} size={18} />
                 </a>
               </div>
-              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)]">
+              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
                 <a href="https://www.linkedin.com/in/terry-chang-hkust/">
                   <LinkedinFill strokeWidth={2} size={18} />
                 </a>
               </div>
 
-              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)]">
+              <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
                 <a href="mailto:tchangac@connect.ust.hk">
                   <Envelope strokeWidth={2} size={18} />
                 </a>
               </div>
             </div>
           </div>
-          <div className="flex justify-start items-center mt-6 w-full md:justify-center">
-            💡 Building The Knowledge Engine for Mankind.
+          <div className="flex justify-center items-center mt-6 w-full md:justify-center">
+            Building The Knowledge Engine for Mankind.
           </div>
         </div>
       </div>
