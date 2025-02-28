@@ -26,7 +26,7 @@ const ProjectsPage = () => {
         </div>
       </div>
       <div className="flex justify-center p-2 w-full">
-        <div className="bg-[rgb(30,30,30)] px-2 py-1 rounded-2xl w-fit flex-col justify-center">
+        <div className="bg-[rgb(30,30,30)] mt-10 space-y-2 py-2 px-2 rounded-2xl w-fit flex-col justify-center">
           <ProjectCard
             title="InterMind"
             description="AI-powered presentation tool  -- [2024]"
@@ -71,21 +71,6 @@ const ProjectsPage = () => {
           />
         </div>
       </div>
-      {/* <div className="flex justify-center mb-10 w-full h-100">
-        <div className="w-5/7 md:w-4/7 justify-center flex bg-[rgb(10,10,10)] rounded-b-lg border-[rgb(40,40,40)] border-[1px] overflow-hidden">
-          <div style={{ position: "relative" }} className="w-full h-full">
-            <InfiniteScroll
-              items={items}
-              isTilted={false}
-              tiltDirection="left"
-              autoplay={true}
-              autoplaySpeed={0.01}
-              autoplayDirection="down"
-              pauseOnHover={true}
-            />
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

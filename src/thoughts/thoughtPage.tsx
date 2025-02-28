@@ -49,7 +49,7 @@ const ThoughtPage: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="text-white p-10 w-screen text-center">loading... 🚀 </div>
+      <div className="p-10 w-screen text-center text-white">loading... 🚀 </div>
     );
   }
 

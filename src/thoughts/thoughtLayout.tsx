@@ -79,16 +79,16 @@ const ThoughtLayout = ({ children, date }: ThoughtLayoutProps) => {
   const { setCurrentPage } = useStore();
 
   return (
-    <div className="w-screen pb-10 min-h-screen flex justify-center items-start pt-20 font-sans">
-      <div className="md:w-1/2 w-4/5">
-        <div className="w-full flex justify-between items-center mb-20">
+    <div className="flex justify-center items-start pt-20 pb-10 w-screen min-h-screen font-sans">
+      <div className="w-4/5 md:w-1/2">
+        <div className="flex justify-between items-center mb-20 w-full">
           <div
             role="button"
             onClick={() => {
               setCurrentPage("Thoughts");
               navigate("/", { state: { from: "thoughts" } });
             }}
-            className="cursor-pointer text-lg text-white transition-colors duration-200 hover:text-purple-200"
+            className="text-lg text-white transition-colors duration-200 cursor-pointer hover:text-purple-200"
           >
             ←
           </div>

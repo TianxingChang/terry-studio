@@ -102,7 +102,7 @@ function App() {
         {currentPage === "Projects" && <ProjectsPage />}
         {currentPage === "Thoughts" && <ThoughtsPage />}
 
-        <div className="footer w-full h-30 text-sm justify-center items-center flex text-[rgb(60,60,60)]">
+        <div className="footer w-full h-20 text-sm justify-center items-center flex text-[rgb(60,60,60)]">
           Copyright @ 2025 RandomSkywalk. All rights reserved.
         </div>
       </div>
