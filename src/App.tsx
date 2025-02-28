@@ -32,7 +32,7 @@ function App() {
     return (
       <div className="min-w-screen bg-black min-h-[100vh] overflow-x-hidden text-white font-outfit flex flex-col">
         <div className="flex justify-center px-2 w-full">
-          <div className="flex justify-between items-center mt-7 mb-3 w-6/7 md:mt-12 md:w-3/7">
+          <div className="flex justify-between items-center mt-7 mb-3 w-6/7 md:mt-12 md:w-4/7">
             <div className="flex justify-center items-center space-x-4 text-base">
               <div
                 onClick={() => setCurrentPage("Home")}

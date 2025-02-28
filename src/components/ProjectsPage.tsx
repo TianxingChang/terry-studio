@@ -1,4 +1,4 @@
-import TextPressure from "./TextPursure";
+// import TextPressure from "./TextPursure";
 // import InfiniteScroll from "./InfiniteScroll";
 import { ProjectCard } from "./ProjectCard";
 
@@ -26,7 +26,7 @@ const ProjectsPage = () => {
         </div>
       </div>
       <div className="flex justify-center p-2 w-full">
-        <div className="bg-[rgb(30,30,30)] mt-10 p-2 w-full rounded-2xl md:w-fit flex-col justify-center">
+        <div className="bg-[rgb(30,30,30)] px-2 py-1 rounded-2xl w-fit flex-col justify-center">
           <ProjectCard
             title="InterMind"
             description="AI-powered presentation tool  -- [2024]"
