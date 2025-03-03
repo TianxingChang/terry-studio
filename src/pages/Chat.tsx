@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import RotatingText from "../components/ui/RotatingText";
 
 interface Message {
   text: string;
@@ -14,21 +15,32 @@ const Chat = () => {
   const ChatMessage = () => {
     if (messages.length === 0) {
       return (
-        <div className="flex-1 overflow-y-auto p-4 flex items-center pb-40 justify-center flex-col">
-          <div className="text-4xl text-gray-300 font-bold">Terry AI</div>
-          <div className="text-sm text-gray-400 md:text-center w-full mt-2">
-            I'm a digital clone of Terry Chang's personality — feel free to ask
-            me anything.
-            <br />
-            The responses may not fully reflect my thoughts due to LLM
-            limitations.
+        <div className="flex overflow-y-auto flex-col flex-1 justify-center items-center p-4 pb-40">
+          <div className="text-4xl font-bold text-gray-300">Terry AI</div>
+          <div className="flex justify-center mt-4 w-full text-sm text-gray-400">
+            <RotatingText
+              texts={[
+                "I'm a digital clone of Terry Chang's personality",
+                "Ask my anything",
+                "The responses may not fully reflect my thoughts.",
+              ]}
+              mainClassName="px-2 w-fit sm:px-2 md:px-3 bg-[rgb(30,30,30)] text-[rgb(140,140,140)] overflow-hidden py-0.5 py-1 justify-center rounded-lg"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.02}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={5000}
+            />
           </div>
         </div>
       );
     }
 
     return (
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 mb-10">
+      <div className="overflow-y-auto flex-1 p-4 mb-10 space-y-4">
         {messages.map((message, index) => (
           <div
             key={index}
@@ -36,11 +48,11 @@ const Chat = () => {
               message.isUser ? "flex-row-reverse" : "flex-row"
             }`}
           >
-            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+            <div className="overflow-hidden flex-shrink-0 w-8 h-8 rounded-full">
               <img
                 src={message.avatar}
                 alt={message.isUser ? "User Avatar" : "AI Avatar"}
-                className="w-full h-full object-cover"
+                className="object-cover w-full h-full"
               />
             </div>
             <div
@@ -78,10 +90,10 @@ const Chat = () => {
   };
 
   return (
-    <div className="fixed inset-0 w-screen p-10 ">
-      <div className="h-full max-w-3xl mx-auto flex flex-col  ">
+    <div className="fixed inset-0 p-4 mb-6 w-screen md:p-8">
+      <div className="flex flex-col mx-auto max-w-3xl h-full">
         {/* Back button */}
-        <div className="p-2 flex justify-between items-center mb-20 ">
+        <div className="flex justify-between items-center p-2 mb-20">
           <div>
             <div
               onClick={() => navigate("/")}
@@ -91,12 +103,12 @@ const Chat = () => {
             </div>
           </div>
           <div className="flex gap-4 items-center">
-            {/* <div className="text-sm flex items-center justify-center font-bold">
+            {/* <div className="flex justify-center items-center text-sm font-bold">
               Terry AI
             </div> */}
             <div
               onClick={() => setMessages([])}
-              className="text-white border-0 border-purple-900 px-3 py-1 rounded-2xl hover:bg-slate-900 transition-colors duration-200 cursor-pointer"
+              className="px-3 py-1 text-white rounded-2xl border-0 border-purple-900 transition-colors duration-200 cursor-pointer hover:bg-slate-900"
             >
               + New Chat
             </div>
@@ -106,15 +118,15 @@ const Chat = () => {
         {/* Chat messages */}
         <ChatMessage />
         {/* Input form */}
-        <form onSubmit={handleSendMessage} className="p-2">
+        <form onSubmit={handleSendMessage} className="px-2">
           <div className="relative">
-            <div className="flex justify-between items-center rounded-full border-[1px] border-[rgb(210,210,210)] pl-4 pr-2 py-[6px]">
+            <div className="flex justify-between text-gray-300 bg-transparent items-center rounded-full border-[1px] border-[rgb(210,210,210)] pl-4 pr-[4px] py-[5px]">
               <input
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Message..."
-                className="w-full py-1 pl-2 rounded-full border-0 focus:outline-none"
+                className="py-1 pl-2 w-full rounded-full border-0 focus:outline-none"
               />
               <button
                 type="submit"
@@ -125,7 +137,7 @@ const Chat = () => {
                   color: "white",
                   fontSize: "0.875rem",
                 }}
-                className="hover:bg-gray-800 transition-colors duration-200"
+                className="transition-colors duration-200 hover:bg-gray-800"
               >
                 Send
               </button>

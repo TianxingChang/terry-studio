@@ -22,7 +22,7 @@ const ProjectsPage = () => {
               minFontSize={36}
             />
           </div> */}
-          <div className="my-16 text-3xl">Projects Gallery</div>
+          <div className="my-16 text-3xl">Project Gallery</div>
         </div>
       </div>
       <div className="flex justify-center p-2 w-full">

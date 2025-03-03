@@ -3,47 +3,50 @@ import { GithubFill, XFill, LinkedinFill, Envelope } from "akar-icons";
 
 const HomePage = () => {
   return (
-    <div className="flex justify-center w-full md:mb-44 md:mt-6">
-      <div className="pb-10 bg-[rgb(26,26,26)] rounded-2xl w-6/7 md:w-3/7">
-        <div className="flex justify-center w-full rounded-3xl h-100">
-          <div className="w-full md:w-full rounded-2xl border-1  border-[rgb(46,46,46)] bg-[rgb(20,20,20)]">
-            <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
+    <div className="flex justify-center w-full md:mb-6 md:mt-6">
+      <div className="pb-10 rounded-2xl w-5/7 md:w-3/7">
+        <div className="pb-8 rounded-2xl">
+          <div className="flex justify-center w-full rounded-3xl h-100">
+            <div className="w-full md:w-full rounded-2xl border-1  border-[rgb(46,46,46)] bg-[rgb(26,26,26)]">
+              <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
+            </div>
           </div>
-        </div>
-        <div className="flex justify-center mt-10 w-full text-lg space-x-30">
-          <div className="flex-col justify-center items-center text-sm w-5/7 md:text-base">
-            <div>
-              <div className="flex gap-3 justify-center items-center">
-                <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
-                  <a href="https://github.com/tianxingchang">
-                    <GithubFill strokeWidth={2} size={18} />
-                  </a>
-                </div>
-                <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
-                  <a href="https://x.com/crazibility">
-                    <XFill strokeWidth={2} size={18} />
-                  </a>
-                </div>
-                <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
-                  <a href="https://www.linkedin.com/in/terry-chang-hkust/">
-                    <LinkedinFill strokeWidth={2} size={18} />
-                  </a>
-                </div>
+          <div className="flex justify-center mt-10 w-full text-lg space-x-30">
+            <div className="flex-col justify-center items-center text-sm w-5/7 md:text-base">
+              <div>
+                <div className="flex gap-3 justify-center items-center">
+                  <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
+                    <a href="https://github.com/tianxingchang">
+                      <GithubFill strokeWidth={2} size={18} />
+                    </a>
+                  </div>
+                  <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
+                    <a href="https://x.com/crazibility">
+                      <XFill strokeWidth={2} size={18} />
+                    </a>
+                  </div>
+                  <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
+                    <a href="https://www.linkedin.com/in/terry-chang-hkust/">
+                      <LinkedinFill strokeWidth={2} size={18} />
+                    </a>
+                  </div>
 
-                <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
-                  <a href="mailto:tchangac@connect.ust.hk">
-                    <Envelope strokeWidth={2} size={18} />
-                  </a>
+                  <div className="border-[1px] p-1 border-black rounded-md  hover:border-[rgb(100,100,100)] transition-all">
+                    <a href="mailto:tchangac@connect.ust.hk">
+                      <Envelope strokeWidth={2} size={18} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center mt-6 w-full md:justify-center">
-              Building The Knowledge Engine for Mankind.
-            </div>
+          </div>
+          <div className="mt-6 mb-10 w-full text-sm text-center md:mb-16 md:text-base">
+            Building The Knowledge Engine for Mankind.
+            {/* <span>@ Thinkware</span>. */}
           </div>
         </div>
-        <div className="flex justify-center px-6 mt-20 w-full md:mt-26">
-          <div className="w-9/10 md:w-6/7">
+        <div className="flex justify-center mt-4 w-full">
+          <div className="w-full">
             <div className="mb-4 text-xl">About Me</div>
             <div className="text-[rgb(140,140,140)]">
               Hi, I'm Terry Chang. <br />
