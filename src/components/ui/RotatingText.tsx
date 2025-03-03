@@ -70,11 +70,14 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
     const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
 
     const splitIntoCharacters = (text: string): string[] => {
-      if (typeof Intl !== "undefined" && Intl.Segmenter) {
-        const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
+      if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
+        // Type assertion to handle TypeScript not recognizing Segmenter
+        const segmenter = new (Intl as any).Segmenter("en", {
+          granularity: "grapheme",
+        });
         return Array.from(
           segmenter.segment(text),
-          (segment) => segment.segment
+          (segment: { segment: string }) => segment.segment
         );
       }
       return Array.from(text);
